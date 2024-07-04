@@ -831,3 +831,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   README.md
         new file:   app/shop/migrations/0006_setting.py
         modified:   app/shop/models/__init__.py
+
+
+#### 3. Mendaftarkan model Setting pada shop/admin.py
+
+        modified:   README.md
+        modified:   app/shop/admin.py
