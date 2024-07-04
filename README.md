@@ -448,3 +448,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   app/shop/admin.py
         new file:   media/sliders/2024/07/04/1.png
         new file:   media/sliders/2024/07/04/2.png
+
+
+#### 11. Mendefinisikan tampilan Collection objects pada admin panel
+
+        modified:   README.md
+        modified:   app/shop/admin.py

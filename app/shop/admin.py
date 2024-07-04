@@ -19,6 +19,16 @@ class SliderAdmin(admin.ModelAdmin):
 
     display_image.short_description = 'image'
 
+  
+class CollectionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'display_image')
+    list_display_links = ('title',)
+    
+    def display_image(self, obj):
+        return format_html(f'<img src="{ obj.image.url }" width="150" />')
+    
+    display_image.short_description = 'image'
+
 
 admin.site.register(Slider, SliderAdmin)
-admin.site.register(Collection)
+admin.site.register(Collection, CollectionAdmin)
