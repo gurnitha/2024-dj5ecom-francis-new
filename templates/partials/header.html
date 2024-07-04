@@ -12,21 +12,17 @@
                             <div  class="me-3">
                                 <div class="ddOutOfVision" id="msdrpdd20_msddHolder"
                                     style="height: 0px; overflow: hidden; position: absolute;">
-                                    <select
-                                        name="countries" class="custome_select" id="msdrpdd20"
-                                        tabindex="-1">
-                                        <option  value="USD" data-title="USD"
-                                            ng-reflect-value="USD">USD</option>
-                                        <option  value="EUR" data-title="EUR"
-                                            ng-reflect-value="EUR">EUR</option>
-                                        <option  value="GBR" data-title="GBR"
-                                            ng-reflect-value="GBR">GBR</option>
+                                    <select name="countries" class="custome_select" id="msdrpdd20" tabindex="-1">
+                                        <option value="RP" data-title="RP" ng-reflect-value="RP">RP</option>
+                                        <option value="USD" data-title="USD" ng-reflect-value="USD">USD</option>
+                                        <option value="EUR" data-title="EUR" ng-reflect-value="EUR">EUR</option>
+                                        <option value="GBR" data-title="GBR" ng-reflect-value="GBR">GBR</option>
                                     </select>
                                 </div>
                                 <div class="dd ddcommon borderRadius" id="msdrpdd20_msdd" tabindex="0" style="width: 52px;">
                                     <div class="ddTitle borderRadiusTp"><span class="divider"></span><span
                                         class="ddArrow arrowoff"></span><span class="ddTitleText "
-                                        id="msdrpdd20_title"><span class="ddlabel">USD</span><span class="description"
+                                        id="msdrpdd20_title"><span class="ddlabel">RP</span><span class="description"
                                         style="display: none;"></span></span></div>
                                     <input id="msdrpdd20_titleText"
                                         type="text" autocomplete="off" class="text shadow borderRadius"
@@ -34,9 +30,13 @@
                                     <div class="ddChild ddchild_ border shadow" id="msdrpdd20_child"
                                         style="z-index: 9999; display: none; position: absolute; visibility: visible; height: 99px;">
                                         <ul>
-                                            <li class="enabled _msddli_ selected" title="USD">
+                                            <li class="enabled _msddli_ selected" title="{{ request.session.currency }}">
                                                 <span
-                                                    class="ddlabel">USD</span>
+                                                    class="ddlabel">{{ request.session.currency }}</span>
+                                                <div class="clear"></div>
+                                            </li>
+                                            <li class="enabled _msddli_" title="USD">
+                                                <span class="ddlabel">USD</span>
                                                 <div class="clear"></div>
                                             </li>
                                             <li class="enabled _msddli_" title="EUR">
@@ -53,7 +53,7 @@
                             </div>
                             <ul  class="contact_detail text-center text-lg-start">
                                 <li ><i  class="ti-mobile"></i><span
-                                    >+33 7 49 31 69 74</span></li>
+                                    >+{{ request.session.phone }}</span></li>
                             </ul>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                 <nav  class="navbar navbar-expand-lg">
                     <a 
                         routerlink="/" class="navbar-brand" ng-reflect-router-link="/" href="/">
-                        <h2 >Jstore</h2>
+                        <h2 >{{ request.session.name }}</h2>
                     </a>
                     <button  type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-expanded="false"

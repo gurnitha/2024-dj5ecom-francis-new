@@ -17,9 +17,9 @@ def site_settings(request):
         'code_postal' : site_settings.code_postal,
         'state' : site_settings.state,
         'copyright' : site_settings.copyright,
-        'socials': my_socials,
-        'head_pages': my_head_pages,
-        'foot_pages': my_foot_pages,
+        # 'socials': my_socials,
+        # 'head_pages': my_head_pages,
+        # 'foot_pages': my_foot_pages,
     }
     request.session.update(data)
     

@@ -845,3 +845,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         new file:   app/shop/context_processors.py
         modified:   config/settings.py
         new file:   media/settings/logo-38.PNG
+
+
+#### 5. Load dan display info site
+
+        modified:   README.md
+        modified:   app/shop/context_processors.py
+        modified:   templates/partials/footer.html
+        modified:   templates/partials/header.html
