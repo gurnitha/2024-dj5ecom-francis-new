@@ -281,3 +281,57 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         Note:
 
         Model dibuat sebagai modul.
+
+
+#### 2. Membuat dan mengaplikasikan model Slider
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0001_initial.py
+            - Create model Slider
+
+        (francis-new) λ python manage.py migrate shop 0001
+        Operations to perform:
+          Target specific migration: 0001_initial, from shop
+        Running migrations:
+          Applying shop.0001_initial... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0001
+        --
+        -- Create model Slider
+        --
+        CREATE TABLE `shop_slider` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `title` varchar(60) NOT NULL, 
+                `description` varchar(120) NOT NULL, 
+                `button_text` varchar(60) NOT NULL, 
+                `button_link` varchar(255) NOT NULL, 
+                `image` varchar(100) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        modified:   README.md
+        new file:   app/shop/__models/Slider.py
+        new file:   app/shop/__models/__init__.py
+        new file:   app/shop/migrations/0001_initial.py
+        deleted:    app/shop/models.py
+        modified:   app/shop/models/Slider.py
+        modified:   app/shop/models/__init__.py
+
+        Note:
+
+        Masalah:
+
+        1. Dengan cara biasa migrasi gagal.
+
+        Solusi:
+
+        1. Buka file models/__init__.py dan isi code ini
+
+        # app/shop/models/__init__.py
+
+        # Impor Model from models 
+        from app.shop.models.Slider import Slider
+
+        :)
