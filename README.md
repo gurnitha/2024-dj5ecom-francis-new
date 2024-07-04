@@ -175,3 +175,11 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   config/settings.py
+
+
+#### 4. Melindungi sensitif file
+
+        new file:   .env-example
+        modified:   .gitignore
+        modified:   README.md
+        modified:   config/settings.py
