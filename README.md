@@ -183,3 +183,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   .gitignore
         modified:   README.md
         modified:   config/settings.py
+
+
+
+## 7. AKTIVASI
