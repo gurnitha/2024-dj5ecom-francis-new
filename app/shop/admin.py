@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 
 # Locals
-from app.shop.models import Slider, Collection
+from app.shop.models import Slider, Collection, Category
 
 # Register your models here.
 
@@ -32,3 +32,4 @@ class CollectionAdmin(admin.ModelAdmin):
 
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Collection, CollectionAdmin)
+admin.site.register(Category)

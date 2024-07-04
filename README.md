@@ -523,3 +523,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 3. Mendaftarkan model Category pada shop/admin.py dan menginput categories
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        new file:   media/categories/2024/07/04/1.webp
