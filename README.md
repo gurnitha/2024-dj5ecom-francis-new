@@ -72,3 +72,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         modified:   app/shop/apps.py
         modified:   config/settings.py
+
+
+
+## 3. STRUKTUR PROYEK
