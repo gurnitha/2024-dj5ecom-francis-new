@@ -82,58 +82,9 @@
                             <div  id="arrival" role="tabpanel" aria-labelledby="arrival-tab"
                                 class="tab-pane fade show active">
                                 <div  class="row shop_container">
-                                    {% for new_arrival in new_arrivals %}
+                                    {% for product in new_arrivals %}
                                     <div  class="col-lg-3 col-md-4 col-6">
-                                        <div  class="product">
-                                            <div  class="product_img">
-                                                <a href="shop-product-detail.html">
-                                                <img alt="product_img1" src="{{ new_arrival.images.first.image.url }}">
-                                                </a>
-                                                <div  class="product_action_box">
-                                                    <ul  class="list_none pr_action_btn">
-                                                        <li class="add-to-cart">
-                                                            <a href="#">
-                                                            <i class="icon-basket-loaded"></i> Add To Cart </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-compare.html">
-                                                            <i class="icon-shuffle"></i></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-quick-view.html" >
-                                                            <i class="icon-magnifier-add"></i></a>
-                                                        </li>
-                                                        <li ><a href="#"><i class="icon-heart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div  class="product_info">
-                                                <h6 class="product_title">
-                                                    <a ng-reflect-router-link="/,product,bikini-unicolore-cte"
-                                                        href="">{{ new_arrival.name }}</a>
-                                                </h6>
-                                                <div class="product_price">
-                                                    <span class="price">${{ new_arrival.sold_price }}</span>
-                                                        <del>${{ new_arrival.regular_price }}</del>
-                                                    <div  class="on_sale"><span>35% Off</span></div>
-                                                </div>
-                                                <div  class="rating_wrap">
-                                                    <div  class="rating">
-                                                        <div  class="product_rate" style="width: 80%;"></div>
-                                                    </div>
-                                                    <span class="rating_num">(21)</span>
-                                                </div>
-                                                <div  class="pr_desc">
-                                                    <p>{{ new_arrival.description | safe }}
-                                                    </p>
-                                                </div>
-                                                <div  class="pr_switch_wrap">
-                                                    <div class="product_color_switch"><span data-color="#87554B" class="active"></span>
-                                                        <span data-color="#333333"></span><span data-color="#DA323F"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% include 'partials/product.html' with product=product %}
                                     </div>
                                     {% endfor %}
                                 </div>
@@ -144,58 +95,9 @@
                             <div  id="sellers" role="tabpanel" aria-labelledby="sellers-tab"
                                 class="tab-pane fade">
                                 <div  class="row shop_container">
-                                    {% for best_seller in best_sellers %}
+                                    {% for product in best_sellers %}
                                     <div  class="col-lg-3 col-md-4 col-6">
-                                        <div  class="product">
-                                            <div  class="product_img">
-                                                <a href="shop-product-detail.html">
-                                                <img alt="product_img1" src="{{ best_seller.images.first.image.url }}">
-                                                </a>
-                                                <div  class="product_action_box">
-                                                    <ul  class="list_none pr_action_btn">
-                                                        <li class="add-to-cart">
-                                                            <a href="#">
-                                                            <i class="icon-basket-loaded"></i> Add To Cart </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-compare.html">
-                                                            <i class="icon-shuffle"></i></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-quick-view.html" >
-                                                            <i class="icon-magnifier-add"></i></a>
-                                                        </li>
-                                                        <li ><a href="#"><i class="icon-heart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div  class="product_info">
-                                                <h6 class="product_title">
-                                                    <a ng-reflect-router-link="/,product,bikini-unicolore-cte"
-                                                        href="">{{ best_seller.name }}</a>
-                                                </h6>
-                                                <div class="product_price">
-                                                    <span class="price">${{ best_seller.sold_price }}</span>
-                                                        <del>${{ best_seller.regular_price }}</del>
-                                                    <div  class="on_sale"><span>35% Off</span></div>
-                                                </div>
-                                                <div  class="rating_wrap">
-                                                    <div  class="rating">
-                                                        <div  class="product_rate" style="width: 80%;"></div>
-                                                    </div>
-                                                    <span class="rating_num">(21)</span>
-                                                </div>
-                                                <div  class="pr_desc">
-                                                    <p>{{ best_seller.description | safe }}
-                                                    </p>
-                                                </div>
-                                                <div  class="pr_switch_wrap">
-                                                    <div class="product_color_switch"><span data-color="#87554B" class="active"></span>
-                                                        <span data-color="#333333"></span><span data-color="#DA323F"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% include 'partials/product.html' with product=product %}
                                     </div>
                                     {% endfor %}
                                 </div>
@@ -206,58 +108,9 @@
                             <div  id="featured" role="tabpanel"
                                 aria-labelledby="featured-tab" class="tab-pane fade">
                                 <div  class="row shop_container">
-                                    {% for featured in featured %}
+                                    {% for product in featured %}
                                     <div  class="col-lg-3 col-md-4 col-6">
-                                        <div  class="product">
-                                            <div  class="product_img">
-                                                <a href="shop-product-detail.html">
-                                                <img alt="product_img1" src="{{ featured.images.first.image.url }}">
-                                                </a>
-                                                <div  class="product_action_box">
-                                                    <ul  class="list_none pr_action_btn">
-                                                        <li class="add-to-cart">
-                                                            <a href="#">
-                                                            <i class="icon-basket-loaded"></i> Add To Cart </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-compare.html">
-                                                            <i class="icon-shuffle"></i></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-quick-view.html" >
-                                                            <i class="icon-magnifier-add"></i></a>
-                                                        </li>
-                                                        <li ><a href="#"><i class="icon-heart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div  class="product_info">
-                                                <h6 class="product_title">
-                                                    <a ng-reflect-router-link="/,product,bikini-unicolore-cte"
-                                                        href="">{{ featured.name }}</a>
-                                                </h6>
-                                                <div class="product_price">
-                                                    <span class="price">${{ featured.sold_price }}</span>
-                                                        <del>${{ featured.regular_price }}</del>
-                                                    <div  class="on_sale"><span>35% Off</span></div>
-                                                </div>
-                                                <div  class="rating_wrap">
-                                                    <div  class="rating">
-                                                        <div  class="product_rate" style="width: 80%;"></div>
-                                                    </div>
-                                                    <span class="rating_num">(21)</span>
-                                                </div>
-                                                <div  class="pr_desc">
-                                                    <p>{{ featured.description | safe }}
-                                                    </p>
-                                                </div>
-                                                <div  class="pr_switch_wrap">
-                                                    <div class="product_color_switch"><span data-color="#87554B" class="active"></span>
-                                                        <span data-color="#333333"></span><span data-color="#DA323F"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% include 'partials/product.html' with product=product %}
                                     </div>
                                     {% endfor %}
                                 </div>
@@ -268,58 +121,9 @@
                             <div  id="special" role="tabpanel" aria-labelledby="special-tab"
                                 class="tab-pane fade">
                                 <div  class="row shop_container">
-                                    {% for special_offer in special_offers %}
+                                    {% for product in special_offers %}
                                     <div  class="col-lg-3 col-md-4 col-6">
-                                        <div  class="product">
-                                            <div  class="product_img">
-                                                <a href="shop-product-detail.html">
-                                                <img alt="product_img1" src="{{ special_offer.images.first.image.url }}">
-                                                </a>
-                                                <div  class="product_action_box">
-                                                    <ul  class="list_none pr_action_btn">
-                                                        <li class="add-to-cart">
-                                                            <a href="#">
-                                                            <i class="icon-basket-loaded"></i> Add To Cart </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-compare.html">
-                                                            <i class="icon-shuffle"></i></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-quick-view.html" >
-                                                            <i class="icon-magnifier-add"></i></a>
-                                                        </li>
-                                                        <li ><a href="#"><i class="icon-heart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div  class="product_info">
-                                                <h6 class="product_title">
-                                                    <a ng-reflect-router-link="/,product,bikini-unicolore-cte"
-                                                        href="">{{ special_offer.name }}</a>
-                                                </h6>
-                                                <div class="product_price">
-                                                    <span class="price">${{ special_offer.sold_price }}</span>
-                                                        <del>${{ special_offer.regular_price }}</del>
-                                                    <div  class="on_sale"><span>35% Off</span></div>
-                                                </div>
-                                                <div  class="rating_wrap">
-                                                    <div  class="rating">
-                                                        <div  class="product_rate" style="width: 80%;"></div>
-                                                    </div>
-                                                    <span class="rating_num">(21)</span>
-                                                </div>
-                                                <div  class="pr_desc">
-                                                    <p>{{ special_offer.description | safe }}
-                                                    </p>
-                                                </div>
-                                                <div  class="pr_switch_wrap">
-                                                    <div class="product_color_switch"><span data-color="#87554B" class="active"></span>
-                                                        <span data-color="#333333"></span><span data-color="#DA323F"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% include 'partials/product.html' with product=product %}
                                     </div>
                                     {% endfor %}
                                 </div>

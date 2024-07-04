@@ -747,3 +747,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         modified:   app/shop/views/shop_view.py
         modified:   templates/shop/index.html
+
+
+#### 16. Membuat partials template untuk product
+
+        modified:   README.md
+        new file:   templates/partials/product.html
+        modified:   templates/shop/index.html
