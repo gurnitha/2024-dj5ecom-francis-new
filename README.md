@@ -65,3 +65,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         new file:   app/shop/models.py
         new file:   app/shop/tests.py
         new file:   app/shop/views.py
+
+
+#### 4. Mendaftarkan aplikasi shop pada app/shop/admin.py
+
+        modified:   README.md
+        modified:   app/shop/apps.py
+        modified:   config/settings.py
