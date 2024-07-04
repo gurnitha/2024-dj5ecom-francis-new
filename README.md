@@ -145,3 +145,22 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 ## 6. DATABASE
+
+
+#### 1. Membuat mysql database
+
+        λ mysql -u root
+        Welcome to the MySQL monitor.  Commands end with ; or \g.
+        Your MySQL connection id is 8
+        Server version: 8.0.30 MySQL Community Server - GPL
+
+        Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+        Oracle is a registered trademark of Oracle Corporation and/or its
+        affiliates. Other names may be trademarks of their respective
+        owners.
+
+        Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+        mysql> CREATE DATABASE 2024_dj5ecom_francis_new;
+        Query OK, 1 row affected (0.14 sec)
