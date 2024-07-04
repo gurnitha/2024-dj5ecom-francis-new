@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 
 # Locals
-from app.shop.models import Slider
+from app.shop.models import Slider, Collection
 
 # Register your models here.
 
@@ -19,4 +19,6 @@ class SliderAdmin(admin.ModelAdmin):
 
     display_image.short_description = 'image'
 
+
 admin.site.register(Slider, SliderAdmin)
+admin.site.register(Collection)

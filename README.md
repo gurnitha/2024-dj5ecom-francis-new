@@ -440,3 +440,11 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         new file:   app/shop/migrations/0002_collection.py
         modified:   app/shop/models/__init__.py
+
+
+#### 10. Mendaftarkan model Collection pada shop/admin.py dan menginput collections
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        new file:   media/sliders/2024/07/04/1.png
+        new file:   media/sliders/2024/07/04/2.png
