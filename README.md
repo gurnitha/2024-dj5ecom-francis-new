@@ -837,3 +837,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 4. Membuat context_processors.py dan insert info site
+
+        modified:   README.md
+        new file:   app/shop/context_processors.py
+        modified:   config/settings.py
+        new file:   media/settings/logo-38.PNG
