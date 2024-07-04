@@ -544,3 +544,39 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         new file:   app/shop/models/Image.py
+
+
+#### 7. Membuat dan mengaplikasikan model Image
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0004_image.py
+            - Create model Image
+
+        (francis-new) λ python manage.py migrate shop 0004
+        Operations to perform:
+          Target specific migration: 0004_image, from shop
+        Running migrations:
+          Applying shop.0004_image... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0004
+        --
+        -- Create model Image
+        --
+        CREATE TABLE `shop_image` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `image` varchar(100) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        mysql> DESC shop_image;
+        +------------+--------------+------+-----+---------+----------------+
+        | Field      | Type         | Null | Key | Default | Extra          |
+        +------------+--------------+------+-----+---------+----------------+
+        | id         | bigint       | NO   | PRI | NULL    | auto_increment |
+        | image      | varchar(100) | NO   |     | NULL    |                |
+        | updated_at | datetime(6)  | NO   |     | NULL    |                |
+        | created_at | datetime(6)  | NO   |     | NULL    |                |
+        +------------+--------------+------+-----+---------+----------------+
+        4 rows in set (0.00 sec)
