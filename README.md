@@ -740,3 +740,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         new file:   media/products/2024/07/04/7.webp
         new file:   media/products/2024/07/04/8.webp
         new file:   media/products/2024/07/04/9.webp
+
+
+#### 15. Load dan display products
+
+        modified:   README.md
+        modified:   app/shop/views/shop_view.py
+        modified:   templates/shop/index.html
