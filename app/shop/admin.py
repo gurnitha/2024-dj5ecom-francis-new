@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 
 # Locals
-from app.shop.models import Slider, Collection, Category
+from app.shop.models import Slider, Collection, Category, Image
 
 # Register your models here.
 
@@ -40,6 +40,10 @@ class CategoryAdmin(admin.ModelAdmin):
     display_image.short_description = 'image'
     exclude = ('slug',)
 
+
+class ImageInline(admin.TabularInline):
+    model = Image
+    extra = 3
 
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Collection, CollectionAdmin)
