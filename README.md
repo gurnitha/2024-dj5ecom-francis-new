@@ -121,3 +121,14 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   templates/shop/index.html
+
+
+#### 2. Membuat path dan loading statik file 
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   config/settings.py
+        modified:   templates/shop/index.html
+
+        Note: 
+        static file diabaikan oleh git(tidak disimpan dalam repositori)
