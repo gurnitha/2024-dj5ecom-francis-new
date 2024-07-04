@@ -366,3 +366,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         Slider masih ditampilkan sebagai slider object pada tabel.
         Sebiknya object diganti dengan title slider.
+
+
+### 6. Mendefinisikan tampilan Slider objects pada admin panel
+
+        modified:   README.md
+        modified:   app/shop/admin.py
