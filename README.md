@@ -473,3 +473,50 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         new file:   app/shop/models/Category.py
+
+
+#### 2. Membuat dan mengaplikasikan model Category
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0003_category.py
+            - Create model Category
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py migrate shop 0003
+        Operations to perform:
+          Target specific migration: 0003_category, from shop
+        Running migrations:
+          Applying shop.0003_category... OK
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py sqlmigrate shop 0003
+        --
+        -- Create model Category
+        --
+        CREATE TABLE `shop_category` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `name` varchar(60) NOT NULL, 
+                `description` varchar(120) NOT NULL, 
+                `slug` varchar(255) NOT NULL, 
+                `image` varchar(100) NOT NULL, 
+                `is_mega` bool NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+        CREATE INDEX `shop_category_slug_4508178e` ON `shop_category` (`slug`);
+
+        mysql> DESC shop_category;
+        +-------------+--------------+------+-----+---------+----------------+
+        | Field       | Type         | Null | Key | Default | Extra          |
+        +-------------+--------------+------+-----+---------+----------------+
+        | id          | bigint       | NO   | PRI | NULL    | auto_increment |
+        | name        | varchar(60)  | NO   |     | NULL    |                |
+        | description | varchar(120) | NO   |     | NULL    |                |
+        | slug        | varchar(255) | NO   | MUL | NULL    |                |
+        | image       | varchar(100) | NO   |     | NULL    |                |
+        | is_mega     | tinyint(1)   | NO   |     | NULL    |                |
+        | updated_at  | datetime(6)  | NO   |     | NULL    |                |
+        | created_at  | datetime(6)  | NO   |     | NULL    |                |
+        +-------------+--------------+------+-----+---------+----------------+
+        8 rows in set (0.00 sec)
