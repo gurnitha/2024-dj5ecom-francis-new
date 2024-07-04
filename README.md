@@ -467,3 +467,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 ## 9. MODELS: EXCLUSIVE PRODUCTS
+
+
+#### 1. Membuat model Category
+
+        modified:   README.md
+        new file:   app/shop/models/Category.py
