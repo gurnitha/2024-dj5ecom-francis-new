@@ -341,3 +341,12 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 4. Login sebagai superuser untuk memeriksa hasil migrasi
+
+        http://127.0.0.1:9000/admin/
+
+        Note:
+
+        Gunakan kredensial superuser untuk login.
