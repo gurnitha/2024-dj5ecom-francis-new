@@ -5,16 +5,18 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Locals
-from app.shop.models import Slider 
+from app.shop.models import Slider, Collection 
 
 # Create your views here.
 
 def index(request):
 
 	sliders = Slider.objects.all()
+	collections = Collection.objects.all()
 
 	data = {
-		"sliders":sliders
+		"sliders":sliders,
+		"collections":collections,
 	}
 
 	return render(request, "shop/index.html", data)

@@ -454,3 +454,12 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 12. Load dan display Collections
+
+        modified:   README.md
+        modified:   app/shop/views/shop_view.py
+        modified:   templates/shop/index.html
+
+        :)
