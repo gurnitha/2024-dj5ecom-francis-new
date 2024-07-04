@@ -538,3 +538,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   app/shop/admin.py
         new file:   media/categories/2024/07/04/3.webp
         new file:   media/categories/2024/07/04/5.webp
+
+
+#### 5. Membuat model Image
+
+        modified:   README.md
+        new file:   app/shop/models/Image.py
