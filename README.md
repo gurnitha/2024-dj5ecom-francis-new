@@ -85,3 +85,15 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 ## 4. URLS, VIEWS, TEMPLATES
+
+
+#### 1. Membuat HALLO WORLD menggunakan HttpResponse: views dan urls
+
+        modified:   README.md
+        modified:   app/shop/urls.py
+        deleted:    app/shop/views.py
+        new file:   app/shop/views/__init__.py
+        new file:   app/shop/views/shop_view.py
+        modified:   config/urls.py
+
+        :)
