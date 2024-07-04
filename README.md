@@ -97,3 +97,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   config/urls.py
 
         :)
+
+
+#### 2. Membuat laman home: urls, views, templates
+
+        modified:   README.md
+        new file:   app/shop/templates/shop/index.html
+        modified:   app/shop/views/shop_view.py
