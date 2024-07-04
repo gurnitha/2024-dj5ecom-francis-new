@@ -254,3 +254,15 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         | date_joined  | datetime(6)  | NO   |     | NULL    |                |
         +--------------+--------------+------+-----+---------+----------------+
         11 rows in set (0.00 sec)
+
+
+#### 2. Membuat superuser
+
+        (francis-new) λ python manage.py createsuperuser
+        Username (leave blank to use 'ing'): superuser
+        Email address: superuser@mail.com
+        Password:
+        Password (again):
+        The password is too similar to the email address.
+        Bypass password validation and create user anyway? [y/N]: y
+        Superuser created successfully.
