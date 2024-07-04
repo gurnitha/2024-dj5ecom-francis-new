@@ -111,3 +111,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         modified:   config/settings.py
         renamed:    app/shop/templates/shop/index.html -> templates/shop/index.html
+
+
+
+## 5. TEMPLATING
