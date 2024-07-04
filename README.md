@@ -132,3 +132,12 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         Note: 
         static file diabaikan oleh git(tidak disimpan dalam repositori)
+
+
+#### 3. Membuat template inheritance dan partials
+
+        modified:   README.md
+        new file:   templates/base.html
+        new file:   templates/partials/footer.html
+        new file:   templates/partials/header.html
+        modified:   templates/shop/index.html
