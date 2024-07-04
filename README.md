@@ -694,3 +694,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         new file:   app/shop/migrations/0005_product_image_product.py
         modified:   app/shop/models/__init__.py
+
+
+#### 13. Mendaftarkan dan mendefinisikan model Product pada shop/admin.py
+
+        modified:   README.md
+        modified:   app/shop/admin.py
