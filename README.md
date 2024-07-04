@@ -1,5 +1,8 @@
 # 2024-dj5ecom-francis-new
 Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
+Github:https://github.com/gurnitha/2024-dj5ecom-francis-new
+Local:E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new
+Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e-commerce/learn/lecture/
 
 
 
@@ -754,3 +757,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         new file:   templates/partials/product.html
         modified:   templates/shop/index.html
+
+
+
+## 10. PENGELOLAAN INFORMASI SITUS
