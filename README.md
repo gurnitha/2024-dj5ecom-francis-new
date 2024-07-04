@@ -761,3 +761,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
 
 ## 10. PENGELOLAAN INFORMASI SITUS
+
+
+#### 1. Membuat model Setting
+
+        modified:   README.md
+        new file:   app/shop/models/Setting.py
