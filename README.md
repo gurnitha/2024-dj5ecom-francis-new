@@ -12,3 +12,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         λ venv312503\Scripts\activate.bat
         (francis-new) λ pip install django==5.0.3
         (francis-new) λ python.exe -m pip install --upgrade pip
+
+
+
+## 2. PROYEK DAN APLIKASI
