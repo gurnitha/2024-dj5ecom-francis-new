@@ -164,3 +164,8 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         mysql> CREATE DATABASE 2024_dj5ecom_francis_new;
         Query OK, 1 row affected (0.14 sec)
+
+
+#### 2. Menginstal mysql driver
+
+        (francis-new) λ pip install mysqlclient
