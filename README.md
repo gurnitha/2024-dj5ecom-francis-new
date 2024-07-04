@@ -269,7 +269,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 
-## 8. MODELS
+## 8. MODELS: SLIDERS DAN NEW COLLECTIONS
 
 
 #### 1. Membuat model Slider
@@ -463,3 +463,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   templates/shop/index.html
 
         :)
+
+
+
+## 9. MODELS: EXCLUSIVE PRODUCTS
