@@ -903,3 +903,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   README.md
         new file:   app/shop/migrations/0007_social.py
         modified:   app/shop/models/__init__.py
+
+
+#### 8. Mendaftarkan model Social pada shop/admin.py, load dan diplay Social
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        modified:   app/shop/context_processors.py
+        modified:   templates/partials/footer.html

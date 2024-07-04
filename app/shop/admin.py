@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 
 # Locals
-from app.shop.models import Slider, Collection, Category, Image, Product, Setting
+from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social
 
 # Register your models here.
 
@@ -72,9 +72,15 @@ class SettingAdmin(admin.ModelAdmin):
     
     display_logo.short_description = 'logo'
 
+
+class SocialAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'icon', 'link')
+    list_display_links = ('name',)
+
     
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Collection, CollectionAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Setting, SettingAdmin)
+admin.site.register(Social, SocialAdmin)
