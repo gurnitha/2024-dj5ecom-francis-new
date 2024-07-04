@@ -169,3 +169,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 #### 2. Menginstal mysql driver
 
         (francis-new) λ pip install mysqlclient
+
+
+#### 3. Menghubungkan proyek dengan database
+
+        modified:   README.md
+        modified:   config/settings.py
