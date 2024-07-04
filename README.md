@@ -520,3 +520,6 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         | created_at  | datetime(6)  | NO   |     | NULL    |                |
         +-------------+--------------+------+-----+---------+----------------+
         8 rows in set (0.00 sec)
+
+        modified:   README.md
+        modified:   app/shop/admin.py
