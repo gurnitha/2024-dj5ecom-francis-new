@@ -700,3 +700,43 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 14. Insert products
+
+        modified:   README.md
+        new file:   media/categories/2024/07/04/2.webp
+        new file:   media/categories/2024/07/04/4.webp
+        new file:   media/products/2024/07/04/1.webp
+        new file:   media/products/2024/07/04/10.webp
+        new file:   media/products/2024/07/04/11.webp
+        new file:   media/products/2024/07/04/12.webp
+        new file:   media/products/2024/07/04/13.webp
+        new file:   media/products/2024/07/04/14.webp
+        new file:   media/products/2024/07/04/14_3OOdjZs.webp
+        new file:   media/products/2024/07/04/15.webp
+        new file:   media/products/2024/07/04/15_JgoUOl4.webp
+        new file:   media/products/2024/07/04/16.webp
+        new file:   media/products/2024/07/04/17.webp
+        new file:   media/products/2024/07/04/2.webp
+        new file:   media/products/2024/07/04/20.webp
+        new file:   media/products/2024/07/04/21.webp
+        new file:   media/products/2024/07/04/22.webp
+        new file:   media/products/2024/07/04/23.webp
+        new file:   media/products/2024/07/04/24.webp
+        new file:   media/products/2024/07/04/25.webp
+        new file:   media/products/2024/07/04/26.webp
+        new file:   media/products/2024/07/04/27.webp
+        new file:   media/products/2024/07/04/28.webp
+        new file:   media/products/2024/07/04/3.webp
+        new file:   media/products/2024/07/04/30.webp
+        new file:   media/products/2024/07/04/31.webp
+        new file:   media/products/2024/07/04/32.webp
+        new file:   media/products/2024/07/04/32_yvJcKFu.webp
+        new file:   media/products/2024/07/04/33.webp
+        new file:   media/products/2024/07/04/34.webp
+        new file:   media/products/2024/07/04/5.webp
+        new file:   media/products/2024/07/04/6.webp
+        new file:   media/products/2024/07/04/7.webp
+        new file:   media/products/2024/07/04/8.webp
+        new file:   media/products/2024/07/04/9.webp
