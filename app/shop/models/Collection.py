@@ -3,8 +3,9 @@
 # Django dan third parties modules
 from django.db import models
 
-# Models: Slider
-class Slider(models.Model):
+
+# Models: Collection
+class Collection(models.Model):
     title = models.CharField(max_length=60, blank=False, null=False)
     description = models.CharField(max_length=120, blank=False, null=False)
     button_text = models.CharField(max_length=60, blank=False, null=False)
