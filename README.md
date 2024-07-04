@@ -767,3 +767,67 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         new file:   app/shop/models/Setting.py
+
+
+#### 2. Membuat dan mengaplikasikan migrasi untuk model Setting
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0006_setting.py
+            - Create model Setting
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py migrate shop 0006
+        Operations to perform:
+          Target specific migration: 0006_setting, from shop
+        Running migrations:
+          Applying shop.0006_setting... OK
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py sqlmigrate shop 0006
+        --
+        -- Create model Setting
+        --
+        CREATE TABLE `shop_setting` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `name` varchar(60) NOT NULL, 
+                `description` varchar(255) NOT NULL, 
+                `currency` varchar(4) NOT NULL, 
+                `taxe_rate` double precision NOT NULL, 
+                `logo` varchar(100) NOT NULL, 
+                `street` varchar(60) NOT NULL, 
+                `city` varchar(255) NOT NULL, 
+                `code_postal` varchar(60) NOT NULL, 
+                `state` varchar(255) NOT NULL, 
+                `phone` varchar(100) NOT NULL, 
+                `email` varchar(254) NOT NULL, 
+                `copyright` varchar(255) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        mysql> DESC shop_setting;
+        +-------------+--------------+------+-----+---------+----------------+
+        | Field       | Type         | Null | Key | Default | Extra          |
+        +-------------+--------------+------+-----+---------+----------------+
+        | id          | bigint       | NO   | PRI | NULL    | auto_increment |
+        | name        | varchar(60)  | NO   |     | NULL    |                |
+        | description | varchar(255) | NO   |     | NULL    |                |
+        | currency    | varchar(4)   | NO   |     | NULL    |                |
+        | taxe_rate   | double       | NO   |     | NULL    |                |
+        | logo        | varchar(100) | NO   |     | NULL    |                |
+        | street      | varchar(60)  | NO   |     | NULL    |                |
+        | city        | varchar(255) | NO   |     | NULL    |                |
+        | code_postal | varchar(60)  | NO   |     | NULL    |                |
+        | state       | varchar(255) | NO   |     | NULL    |                |
+        | phone       | varchar(100) | NO   |     | NULL    |                |
+        | email       | varchar(254) | NO   |     | NULL    |                |
+        | copyright   | varchar(255) | NO   |     | NULL    |                |
+        | updated_at  | datetime(6)  | NO   |     | NULL    |                |
+        | created_at  | datetime(6)  | NO   |     | NULL    |                |
+        +-------------+--------------+------+-----+---------+----------------+
+        15 rows in set (0.01 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0006_setting.py
+        modified:   app/shop/models/__init__.py
