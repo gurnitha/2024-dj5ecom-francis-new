@@ -392,3 +392,51 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         Note:
 
         Model Slider hanya menambahkan lokasi file.
+
+
+#### 9. Membuat dan mengaplikasikan model Collection
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0002_collection.py
+            - Create model Collection
+
+        (francis-new) λ python manage.py migrate shop 0002
+        Operations to perform:
+          Target specific migration: 0002_collection, from shop
+        Running migrations:
+          Applying shop.0002_collection... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0002
+        --
+        -- Create model Collection
+        --
+        CREATE TABLE `shop_collection` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `title` varchar(60) NOT NULL, 
+                `description` varchar(120) NOT NULL, 
+                `button_text` varchar(60) NOT NULL, 
+                `button_link` varchar(255) NOT NULL, 
+                `image` varchar(100) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        mysql> DESC shop_collection;
+        +-------------+--------------+------+-----+---------+----------------+
+        | Field       | Type         | Null | Key | Default | Extra          |
+        +-------------+--------------+------+-----+---------+----------------+
+        | id          | bigint       | NO   | PRI | NULL    | auto_increment |
+        | title       | varchar(60)  | NO   |     | NULL    |                |
+        | description | varchar(120) | NO   |     | NULL    |                |
+        | button_text | varchar(60)  | NO   |     | NULL    |                |
+        | button_link | varchar(255) | NO   |     | NULL    |                |
+        | image       | varchar(100) | NO   |     | NULL    |                |
+        | updated_at  | datetime(6)  | NO   |     | NULL    |                |
+        | created_at  | datetime(6)  | NO   |     | NULL    |                |
+        +-------------+--------------+------+-----+---------+----------------+
+        8 rows in set (0.01 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0002_collection.py
+        modified:   app/shop/models/__init__.py
