@@ -530,3 +530,11 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         modified:   README.md
         modified:   app/shop/admin.py
         new file:   media/categories/2024/07/04/1.webp
+
+
+#### 4. Mendefinisikan tampilan Category objects pada admin panel
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        new file:   media/categories/2024/07/04/3.webp
+        new file:   media/categories/2024/07/04/5.webp

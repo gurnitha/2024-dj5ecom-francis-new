@@ -30,6 +30,17 @@ class CollectionAdmin(admin.ModelAdmin):
     display_image.short_description = 'image'
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'display_image')
+    list_display_links = ('name',)
+    
+    def display_image(self, obj):
+        return format_html(f'<img src="{ obj.image.url }" width="150" />')
+    
+    display_image.short_description = 'image'
+    exclude = ('slug',)
+
+
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Collection, CollectionAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
