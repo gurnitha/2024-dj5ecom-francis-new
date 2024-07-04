@@ -29,3 +29,24 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         new file:   config/urls.py
         new file:   config/wsgi.py
         new file:   manage.py
+
+
+#### 2. Menjalankan developmen server
+
+        (francis-new) λ python manage.py runserver
+        Watching for file changes with StatReloader
+        Performing system checks...
+
+        System check identified no issues (0 silenced).
+
+        You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+        Run 'python manage.py migrate' to apply them.
+        July 04, 2024 - 07:53:33
+        Django version 5.0.3, using settings 'config.settings'
+        Starting development server at http://127.0.0.1:8000/
+        Quit the server with CTRL-BREAK.
+
+        Note:
+
+        Saat kali pertama menjalankan developmen server, maka django
+        akan menghasilkan secara default db.sqlite3.
