@@ -859,3 +859,47 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         new file:   app/shop/models/Social.py
+
+
+#### 7. Membuat dan mengaplikasikan migrasi untuk model Social
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0007_social.py
+            - Create model Social
+
+        (francis-new) λ python manage.py migrate shop 0007
+        Operations to perform:
+          Target specific migration: 0007_social, from shop
+        Running migrations:
+          Applying shop.0007_social... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0007
+        --
+        -- Create model Social
+        --
+        CREATE TABLE `shop_social` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `name` varchar(60) NOT NULL, 
+                `icon` varchar(120) NOT NULL, 
+                `link` varchar(255) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        mysql> DESC shop_social;
+        +------------+--------------+------+-----+---------+----------------+
+        | Field      | Type         | Null | Key | Default | Extra          |
+        +------------+--------------+------+-----+---------+----------------+
+        | id         | bigint       | NO   | PRI | NULL    | auto_increment |
+        | name       | varchar(60)  | NO   |     | NULL    |                |
+        | icon       | varchar(120) | NO   |     | NULL    |                |
+        | link       | varchar(255) | NO   |     | NULL    |                |
+        | updated_at | datetime(6)  | NO   |     | NULL    |                |
+        | created_at | datetime(6)  | NO   |     | NULL    |                |
+        +------------+--------------+------+-----+---------+----------------+
+        6 rows in set (0.00 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0007_social.py
+        modified:   app/shop/models/__init__.py
