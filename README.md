@@ -352,7 +352,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         Gunakan kredensial superuser untuk login.
 
 
-### 5. Membuat path untuk media file dan menginput sliders
+#### 5. Membuat path untuk media file dan menginput sliders
 
         modified:   README.md
         modified:   config/settings.py
@@ -368,7 +368,16 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         Sebiknya object diganti dengan title slider.
 
 
-### 6. Mendefinisikan tampilan Slider objects pada admin panel
+#### 6. Mendefinisikan tampilan Slider objects pada admin panel
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 7. Load dan display sliders
+
+        modified:   app/shop/views/shop_view.py
+        new file:   templates/partials/slider.html
+        modified:   templates/shop/index.html
+
+        :)

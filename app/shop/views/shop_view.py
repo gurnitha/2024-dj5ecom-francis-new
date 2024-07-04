@@ -4,8 +4,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# Locals
+from app.shop.models import Slider 
 
 # Create your views here.
 
 def index(request):
-	return render(request, "shop/index.html")
+
+	sliders = Slider.objects.all()
+
+	data = {
+		"sliders":sliders
+	}
+
+	return render(request, "shop/index.html", data)
