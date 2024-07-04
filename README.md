@@ -604,3 +604,93 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         modified:   app/shop/models/Image.py
+
+
+#### 12. Membuat dan mengaplikasikan migrasi pada model Product
+
+        (francis-new) λ python manage.py makemigrations shop
+        It is impossible to add a non-nullable field 'product' to image without specifying a default. This is because the database needs something to populate existing rows.
+        Please select a fix:
+         1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+         2) Quit and manually define a default value in models.py.
+        Select an option: 1
+        Please enter the default value as valid Python.
+        The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+        Type 'exit' to exit this prompt
+        >>> 1
+        Migrations for 'shop':
+          app\shop\migrations\0005_product_image_product.py
+            - Create model Product
+            - Add field product to image
+
+        (francis-new) λ python manage.py migrate shop 0005
+        Operations to perform:
+          Target specific migration: 0005_product_image_product, from shop
+        Running migrations:
+          Applying shop.0005_product_image_product... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0005
+        --
+        -- Create model Product
+        --
+        CREATE TABLE `shop_product` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(60) NOT NULL, `slug` varchar(255) NOT NULL, `description` varchar(120) NOT NULL, `more_description` longtext NULL, `additional_infos` longtext NULL, `stock` integer NOT NULL, `sold_price` double precision NOT NULL, `regular_price` double precision NOT NULL, `brand` varchar(60) NULL, `is_available` bool NOT NULL, `is_best_seller` bool NOT NULL, `is_new_arrival` bool NOT NULL, `is_featured` bool NOT NULL, `is_special_offer` bool NOT NULL, `updated_at` datetime(6) NOT NULL, `created_at` datetime(6) NOT NULL);
+        CREATE TABLE `shop_product_categories` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `product_id` bigint NOT NULL, `category_id` bigint NOT NULL);
+        --
+        -- Add field product to image
+        --
+        ALTER TABLE `shop_image` ADD COLUMN `product_id` bigint DEFAULT 1 NOT NULL , ADD CONSTRAINT `shop_image_product_id_1cb0873d_fk_shop_product_id` FOREIGN KEY (`product_id`) REFERENCES `shop_product`(`id`);
+        ALTER TABLE `shop_image` ALTER COLUMN `product_id` DROP DEFAULT;
+        CREATE INDEX `shop_product_slug_30bd2d5d` ON `shop_product` (`slug`);
+        ALTER TABLE `shop_product_categories` ADD CONSTRAINT `shop_product_categories_product_id_category_id_edca6f84_uniq` UNIQUE (`product_id`, `category_id`);
+        ALTER TABLE `shop_product_categories` ADD CONSTRAINT `shop_product_categories_product_id_59c38762_fk_shop_product_id` FOREIGN KEY (`product_id`) REFERENCES `shop_product` (`id`);
+        ALTER TABLE `shop_product_categories` ADD CONSTRAINT `shop_product_categories_category_id_7b004fe8_fk_shop_category_id` FOREIGN KEY (`category_id`) REFERENCES `shop_category` (`id`);
+
+        mysql> DESC shop_image;
+        +------------+--------------+------+-----+---------+----------------+
+        | Field      | Type         | Null | Key | Default | Extra          |
+        +------------+--------------+------+-----+---------+----------------+
+        | id         | bigint       | NO   | PRI | NULL    | auto_increment |
+        | image      | varchar(100) | NO   |     | NULL    |                |
+        | updated_at | datetime(6)  | NO   |     | NULL    |                |
+        | created_at | datetime(6)  | NO   |     | NULL    |                |
+        | product_id | bigint       | NO   | MUL | NULL    |                |
+        +------------+--------------+------+-----+---------+----------------+
+        5 rows in set (0.00 sec)
+
+        mysql> DESC shop_product_categories;
+        +-------------+--------+------+-----+---------+----------------+
+        | Field       | Type   | Null | Key | Default | Extra          |
+        +-------------+--------+------+-----+---------+----------------+
+        | id          | bigint | NO   | PRI | NULL    | auto_increment |
+        | product_id  | bigint | NO   | MUL | NULL    |                |
+        | category_id | bigint | NO   | MUL | NULL    |                |
+        +-------------+--------+------+-----+---------+----------------+
+        3 rows in set (0.00 sec)
+
+        mysql> DESC shop_product;
+        +------------------+--------------+------+-----+---------+----------------+
+        | Field            | Type         | Null | Key | Default | Extra          |
+        +------------------+--------------+------+-----+---------+----------------+
+        | id               | bigint       | NO   | PRI | NULL    | auto_increment |
+        | name             | varchar(60)  | NO   |     | NULL    |                |
+        | slug             | varchar(255) | NO   | MUL | NULL    |                |
+        | description      | varchar(120) | NO   |     | NULL    |                |
+        | more_description | longtext     | YES  |     | NULL    |                |
+        | additional_infos | longtext     | YES  |     | NULL    |                |
+        | stock            | int          | NO   |     | NULL    |                |
+        | sold_price       | double       | NO   |     | NULL    |                |
+        | regular_price    | double       | NO   |     | NULL    |                |
+        | brand            | varchar(60)  | YES  |     | NULL    |                |
+        | is_available     | tinyint(1)   | NO   |     | NULL    |                |
+        | is_best_seller   | tinyint(1)   | NO   |     | NULL    |                |
+        | is_new_arrival   | tinyint(1)   | NO   |     | NULL    |                |
+        | is_featured      | tinyint(1)   | NO   |     | NULL    |                |
+        | is_special_offer | tinyint(1)   | NO   |     | NULL    |                |
+        | updated_at       | datetime(6)  | NO   |     | NULL    |                |
+        | created_at       | datetime(6)  | NO   |     | NULL    |                |
+        +------------------+--------------+------+-----+---------+----------------+
+        17 rows in set (0.00 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0005_product_image_product.py
+        modified:   app/shop/models/__init__.py
