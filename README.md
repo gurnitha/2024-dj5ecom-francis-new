@@ -853,3 +853,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   app/shop/context_processors.py
         modified:   templates/partials/footer.html
         modified:   templates/partials/header.html
+
+
+#### 6. Membuat model Social
+
+        modified:   README.md
+        new file:   app/shop/models/Social.py
