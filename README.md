@@ -114,4 +114,10 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 
-## 5. TEMPLATING
+## 5. TEMPLATING DAN STATIK FILE
+
+
+#### 1. Mengisi HTML template pada laman home
+
+        modified:   README.md
+        modified:   templates/shop/index.html
