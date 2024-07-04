@@ -50,3 +50,18 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         Saat kali pertama menjalankan developmen server, maka django
         akan menghasilkan secara default db.sqlite3.
+
+
+#### 3. Membuat aplikasi shop
+
+        (francis-new) λ mkdir app\shop
+        (francis-new) λ django-admin startapp shop app\shop
+
+        modified:   README.md
+        new file:   app/shop/__init__.py
+        new file:   app/shop/admin.py
+        new file:   app/shop/apps.py
+        new file:   app/shop/migrations/__init__.py
+        new file:   app/shop/models.py
+        new file:   app/shop/tests.py
+        new file:   app/shop/views.py
