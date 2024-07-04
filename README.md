@@ -270,3 +270,14 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
 
 ## 8. MODELS
+
+
+#### 1. Membuat model Slider
+
+        modified:   README.md
+        new file:   app/shop/models/Slider.py
+        new file:   app/shop/models/__init__.py
+
+        Note:
+
+        Model dibuat sebagai modul.
