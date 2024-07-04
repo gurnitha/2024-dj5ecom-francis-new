@@ -141,3 +141,7 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
         new file:   templates/partials/footer.html
         new file:   templates/partials/header.html
         modified:   templates/shop/index.html
+
+
+
+## 6. DATABASE
