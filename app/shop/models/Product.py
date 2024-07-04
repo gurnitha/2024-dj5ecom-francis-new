@@ -4,6 +4,8 @@
 from django.db import models
 from django.utils.text import slugify
 
+# Locals
+from app.shop.models.Category import Category
 
 # Model:Product
 class Product(models.Model):
@@ -13,7 +15,7 @@ class Product(models.Model):
     more_description = models.TextField(blank=True, null=True)
     additional_infos = models.TextField(blank=True, null=True)
     stock = models.IntegerField(blank=False, null=False)
-    solde_price = models.FloatField(blank=False, null=False)
+    sold_price = models.FloatField(blank=False, null=False)
     regular_price = models.FloatField(blank=False, null=False)
     brand = models.CharField(max_length=60, blank=True, null=True)
     is_available = models.BooleanField(blank=False, null=False)
@@ -21,6 +23,7 @@ class Product(models.Model):
     is_new_arrival = models.BooleanField(blank=False, null=False)
     is_featured = models.BooleanField(blank=False, null=False)
     is_special_offer = models.BooleanField(blank=False, null=False)
+    categories = models.ManyToManyField(Category)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
     

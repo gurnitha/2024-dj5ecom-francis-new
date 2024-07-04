@@ -592,3 +592,9 @@ Membuat aplikasi ecommerce menggunakan Django versi 5.0.3
 
         modified:   README.md
         new file:   app/shop/models/Product.py
+
+
+#### 10. Menambahkan hubungan ManyToMany antara model Category dengan model Product
+
+        modified:   README.md
+        modified:   app/shop/models/Product.py
