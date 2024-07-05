@@ -911,3 +911,7 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   app/shop/admin.py
         modified:   app/shop/context_processors.py
         modified:   templates/partials/footer.html
+
+
+
+## 11. PENGELOLAAN LAMAN SITUS
