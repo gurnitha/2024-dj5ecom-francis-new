@@ -3,12 +3,13 @@
 # Django dan third parties modules
 from django.contrib import admin
 from django.utils.html import format_html
+from django.db import models
 
 # Locals
-from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social
-# Register your models here.
+from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social, Page
 
-# admin.site.register(Slider)
+
+# Register your models here.
 
 class SliderAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'display_image')
@@ -75,6 +76,14 @@ class SettingAdmin(admin.ModelAdmin):
 class SocialAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'icon', 'link')
     list_display_links = ('name',)
+    
+
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'is_head', 'is_foot', 'is_checkout')
+    list_display_links = ('name',)
+    list_editable = ('is_head', 'is_foot', 'is_checkout')
+
+    exclude = ('slug',)
 
     
 admin.site.register(Slider, SliderAdmin)
@@ -83,3 +92,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Setting, SettingAdmin)
 admin.site.register(Social, SocialAdmin)
+admin.site.register(Page, PageAdmin)

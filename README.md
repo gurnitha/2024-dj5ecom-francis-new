@@ -1024,3 +1024,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         new file:   app/shop/migrations/0008_auto_20240705_0905.py
         new file:   app/shop/migrations/0009_page.py
         modified:   app/shop/models/__init__.py
+
+
+#### 3. Mendaftarkan dan mendefinisikan model Page pada shop/admin.py 
+
+        modified:   README.md
+        modified:   app/shop/admin.py
