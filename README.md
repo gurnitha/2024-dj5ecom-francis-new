@@ -921,3 +921,106 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         new file:   app/shop/models/Page.py
+
+
+#### 2. Membuat dan mengaplikasikan migrasi untuk model Page
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0008_page.py
+            - Create model Page
+
+        (francis-new) λ python manage.py migrate shop 0008
+        Operations to perform:
+          Target specific migration: 0008_page, from shop
+        Running migrations:
+          Applying shop.0008_page... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0008
+        --
+        -- Create model Page
+        --
+        CREATE TABLE `shop_page` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `name` varchar(255) NOT NULL, 
+                `slug` varchar(50) NOT NULL, 
+                `content` longtext NOT NULL, 
+                `is_head` bool NOT NULL, 
+                `is_foot` bool NOT NULL, 
+                `is_checkout` bool NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+        CREATE INDEX `shop_page_slug_76a841a4` ON `shop_page` (`slug`);
+
+        mysql> DESC shop_page;
+        +-------------+--------------+------+-----+---------+----------------+
+        | Field       | Type         | Null | Key | Default | Extra          |
+        +-------------+--------------+------+-----+---------+----------------+
+        | id          | bigint       | NO   | PRI | NULL    | auto_increment |
+        | name        | varchar(255) | NO   |     | NULL    |                |
+        | slug        | varchar(50)  | NO   | MUL | NULL    |                |
+        | content     | longtext     | NO   |     | NULL    |                |
+        | is_head     | tinyint(1)   | NO   |     | NULL    |                |
+        | is_foot     | tinyint(1)   | NO   |     | NULL    |                |
+        | is_checkout | tinyint(1)   | NO   |     | NULL    |                |
+        | updated_at  | datetime(6)  | NO   |     | NULL    |                |
+        | created_at  | datetime(6)  | NO   |     | NULL    |                |
+        +-------------+--------------+------+-----+---------+----------------+
+        9 rows in set (0.01 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0008_page.py
+        modified:   app/shop/models/__init__.py
+
+        NOTE: No migrations to apply.
+
+        Aktivitas:
+
+        1. Menghapus file migrasi
+        2. Menghapus tabel
+
+        Hasil:
+
+        1. Tabel terhapus
+        2. Membuat model baru (Page)
+        3. Menjalankan migrasi dengan hasil: No migrations to apply.
+
+        Solusi:
+
+        (francis-new) λ python manage.py makemigrations --empty shop
+        Migrations for 'shop':
+          app\shop\migrations\0008_auto_20240705_0905.py
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py migrate shop 0008
+        Operations to perform:
+          Target specific migration: 0008_auto_20240705_0905, from shop
+        Running migrations:
+          Applying shop.0008_auto_20240705_0905... OK
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0009_page.py
+            - Create model Page
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py migrate shop 0008
+        Operations to perform:
+          Target specific migration: 0008_auto_20240705_0905, from shop
+        Running migrations:
+          No migrations to apply.
+
+        E:\_WORKSPACE\2024\ex_desktop\2024-DEVSPACE\2024-dj5ecom-francis-new\src(main -> origin)
+        (francis-new) λ python manage.py migrate shop 0009
+        Operations to perform:
+          Target specific migration: 0009_page, from shop
+        Running migrations:
+          Applying shop.0009_page... OK
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        new file:   app/shop/migrations/0008_auto_20240705_0905.py
+        new file:   app/shop/migrations/0009_page.py
+        modified:   app/shop/models/__init__.py

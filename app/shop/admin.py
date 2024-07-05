@@ -6,7 +6,6 @@ from django.utils.html import format_html
 
 # Locals
 from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social
-
 # Register your models here.
 
 # admin.site.register(Slider)
