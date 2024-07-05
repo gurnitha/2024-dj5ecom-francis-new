@@ -1124,3 +1124,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/partials/header.html
+
+
+#### 4. Display products by category in the header part 3: show product item pada header
+
+        modified:   README.md
+        modified:   templates/partials/header.html
