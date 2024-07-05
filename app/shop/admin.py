@@ -4,6 +4,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.db import models
+from ckeditor.widgets import CKEditorWidget
 
 # Locals
 from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social, Page
@@ -82,6 +83,10 @@ class PageAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'is_head', 'is_foot', 'is_checkout')
     list_display_links = ('name',)
     list_editable = ('is_head', 'is_foot', 'is_checkout')
+    
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget}
+    }
 
     exclude = ('slug',)
 

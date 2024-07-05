@@ -3,6 +3,7 @@ venv312503
 _docs
 static
 .env
+staticfiles
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

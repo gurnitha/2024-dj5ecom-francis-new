@@ -1072,3 +1072,20 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         new file:   templates/partials/top_page.html
         modified:   templates/shop/page.html
+
+
+#### 8. Menginstal django-ckeditor
+
+        (francis-new) λ pip install django-ckeditor==6.7.0
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   app/shop/admin.py
+        modified:   config/settings.py
+
+        NOTE:
+
+        1. Menginstal django-ckeditor
+        2. Memodifikasi konten menggunakan ckeditor
+
+        :)

@@ -49,7 +49,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    # baru
+    # Third parties
+    "ckeditor",
+
+    # Locals
     "app.shop",
 ]
 
@@ -151,15 +154,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-# Static file
-STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_URL = 'static/'
 
+# =======Added scripts=======
+# Static file
+STATIC_ROOT = BASE_DIR /"staticfiles/"
+STATICFILES_DIRS = [BASE_DIR / 'static']
 # Media file
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+# =======Added scripts ends=======
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
