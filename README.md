@@ -1136,3 +1136,50 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         new file:   app/shop/models/NavCollection.py
+
+
+#### 6. Menampilkan koleksi mega menu part 2: membuat dan mengaplikasikan migrasi
+
+        (francis-new) λ python manage.py makemigrations shop
+        Migrations for 'shop':
+          app\shop\migrations\0010_navcollection.py
+            - Create model NavCollection
+
+        (francis-new) λ python manage.py migrate shop 0010
+        Operations to perform:
+          Target specific migration: 0010_navcollection, from shop
+        Running migrations:
+          Applying shop.0010_navcollection... OK
+
+        (francis-new) λ python manage.py sqlmigrate shop 0010
+        --
+        -- Create model NavCollection
+        --
+        CREATE TABLE `shop_navcollection` (
+                `id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+                `title` varchar(60) NOT NULL, 
+                `description` varchar(120) NOT NULL, 
+                `button_text` varchar(60) NOT NULL, 
+                `button_link` varchar(255) NOT NULL, 
+                `image` varchar(100) NOT NULL, 
+                `updated_at` datetime(6) NOT NULL, 
+                `created_at` datetime(6) NOT NULL
+        );
+
+        mysql> DESC shop_navcollection;
+        +-------------+--------------+------+-----+---------+----------------+
+        | Field       | Type         | Null | Key | Default | Extra          |
+        +-------------+--------------+------+-----+---------+----------------+
+        | id          | bigint       | NO   | PRI | NULL    | auto_increment |
+        | title       | varchar(60)  | NO   |     | NULL    |                |
+        | description | varchar(120) | NO   |     | NULL    |                |
+        | button_text | varchar(60)  | NO   |     | NULL    |                |
+        | button_link | varchar(255) | NO   |     | NULL    |                |
+        | image       | varchar(100) | NO   |     | NULL    |                |
+        | updated_at  | datetime(6)  | NO   |     | NULL    |                |
+        | created_at  | datetime(6)  | NO   |     | NULL    |                |
+        +-------------+--------------+------+-----+---------+----------------+
+        8 rows in set (0.00 sec)
+
+        modified:   README.md
+        new file:   app/shop/migrations/0010_navcollection.py
