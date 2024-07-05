@@ -1197,3 +1197,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         new file:   media/new_collections/2024/07/05/coll_3.png
         new file:   media/new_collections/2024/07/05/coll_4.png
         modified:   app/shop/admin.py
+
+
+#### 8. Membuat context_processors untuk NavCollection
+
+        modified:   README.md
+        modified:   app/shop/context_processors.py

@@ -5,6 +5,7 @@ from app.shop.models.Setting import Setting
 from app.shop.models.Social import Social
 from app.shop.models.Page import Page
 from app.shop.models.Category import Category
+from app.shop.models.NavCollection import NavCollection
 
 
 def site_settings(request):
@@ -13,6 +14,7 @@ def site_settings(request):
     head_pages = Page.objects.filter(is_head=True)
     foot_pages = Page.objects.filter(is_foot=True)
     mega_categories = Category.objects.filter(is_mega=True)
+    navs = NavCollection.objects.all()[:3]
 
     my_socials = []
     for item in socials:
@@ -59,6 +61,15 @@ def site_settings(request):
             'products': product_arr
         })
 
+    nav_collections = []
+    for nav_item in navs:
+        nav_collections.append({
+            'title': nav_item.title,
+            'button_text': nav_item.button_text,
+            'button_link': nav_item.button_link,
+            'imageUrl': nav_item.image.url,
+        })
+
 
     data = {
         'name' : site_settings.name,
@@ -74,7 +85,9 @@ def site_settings(request):
         'socials': my_socials,
         'head_pages': my_head_pages,
         'foot_pages': my_foot_pages,
+        'nav_collections': nav_collections,
     }
+    
     request.session.update(data)
     
     return data
