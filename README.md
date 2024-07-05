@@ -1030,3 +1030,12 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 4. Membuat laman: About, Contact, Legal, Partner, Services
+
+        modified:   README.m
+
+        Note:
+
+        Semua laman itu dibuat melalui admin panel.
