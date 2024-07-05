@@ -1102,3 +1102,7 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         berhsil dibuat dan dinamis.
 
         :)
+
+
+
+## 12. PENGELOLAAN MEGA MENU
