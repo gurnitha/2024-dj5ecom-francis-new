@@ -4,12 +4,15 @@
 from app.shop.models.Setting import Setting
 from app.shop.models.Social import Social
 from app.shop.models.Page import Page
+from app.shop.models.Category import Category
+
 
 def site_settings(request):
     site_settings = Setting.objects.first()
     socials = Social.objects.all()
     head_pages = Page.objects.filter(is_head=True)
     foot_pages = Page.objects.filter(is_foot=True)
+    mega_categories = Category.objects.filter(is_mega=True)
 
     my_socials = []
     for item in socials:
@@ -32,6 +35,30 @@ def site_settings(request):
             'name': item.name,
             'slug': item.slug
         })
+
+
+    my_mega_categories = []
+    for category in mega_categories:
+        products = category.product_set.all()[:4]
+        product_arr = []
+
+        for product in products:
+
+            image = None
+            if product.images.exists():
+                image = product.images.first()
+
+            product_arr.append({ 
+                'name': product.name, 
+                'slug': product.slug,
+                'image':image.image.url
+            })
+
+        my_mega_categories.append({
+            'name': category.name,
+            'products': product_arr
+        })
+
 
     data = {
         'name' : site_settings.name,

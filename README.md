@@ -1112,3 +1112,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   app/shop/admin.py
+
+
+#### 2. Display products by category in the header part 1: membuat context_processors
+
+        modified:   README.md
+        modified:   app/shop/context_processors.py
