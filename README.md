@@ -1066,3 +1066,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         Note: Berhasil menampilkan halaman 
 
         :)
+
+
+#### 7. Menampilkan halaman part 2: styling 
+
+        new file:   templates/partials/top_page.html
+        modified:   templates/shop/page.html

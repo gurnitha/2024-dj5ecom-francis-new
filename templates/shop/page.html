@@ -4,7 +4,12 @@
 
 {% block content %}
 
-<h1>{{ page.name }}</h1>
-<p>{{ page.content }}</p>
+{% include "partials/top_page.html" with name=page.name %}
+
+<div class="section pb_70">
+	<div class="container">
+		<p>{{ page.content | safe }}</p>
+	</div>
+</div>
 
 {% endblock %}
