@@ -1089,3 +1089,16 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         2. Memodifikasi konten menggunakan ckeditor
 
         :)
+
+
+#### 9. Menampilkan halaman pada footer
+
+        modified:   README.md
+        modified:   templates/partials/footer.html
+
+        NOTE:
+
+        Laman baru: About, Contact, Legal, Partner, Services
+        berhsil dibuat dan dinamis.
+
+        :)
