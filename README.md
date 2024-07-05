@@ -915,3 +915,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
 
 ## 11. PENGELOLAAN LAMAN SITUS
+
+
+#### 1. Membuat model Page
+
+        modified:   README.md
+        new file:   app/shop/models/Page.py
