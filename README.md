@@ -1045,3 +1045,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   app/shop/context_processors.py
+
+
+#### 6. Load dan display object Page pada menu pages
+
+        modified:   README.md
+        modified:   templates/partials/header.html
+
+        :)
