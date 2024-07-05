@@ -1039,3 +1039,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         Note:
 
         Semua laman itu dibuat melalui admin panel.
+
+
+#### 5. Menambahkan logik untuk model Page pada context_processors
+
+        modified:   README.md
+        modified:   app/shop/context_processors.py
