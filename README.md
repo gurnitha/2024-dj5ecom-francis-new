@@ -1130,3 +1130,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/partials/header.html
+
+
+#### 5. Menampilkan koleksi mega menu part 1: membuat model NavCollection
+
+        modified:   README.md
+        new file:   app/shop/models/NavCollection.py
