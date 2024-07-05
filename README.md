@@ -1106,3 +1106,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
 
 ## 12. PENGELOLAAN MEGA MENU
+
+
+#### 1. Memodifikasi (re-sizing) Category objects display pada admim panel
+
+        modified:   README.md
+        modified:   app/shop/admin.py

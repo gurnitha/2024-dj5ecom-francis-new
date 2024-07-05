@@ -37,7 +37,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links = ('name',)
     
     def display_image(self, obj):
-        return format_html(f'<img src="{ obj.image.url }" width="150" />')
+        return format_html(f'<img src="{ obj.image.url }" height="50" width="60" />')
     
     display_image.short_description = 'image'
     exclude = ('slug',)
