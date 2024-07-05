@@ -108,7 +108,7 @@
                                         {% for page in request.session.head_pages %}
                                         <li><a routerlink="/about"
                                             class="dropdown-item nav-link nav_item" ng-reflect-router-link="/about"
-                                            href="/about">{{ page.name }}</a></li>
+                                            href="{% url 'shop:page' page.slug %}">{{ page.name }}</a></li>
                                         <li>
                                         {% endfor %}
                                     </ul>

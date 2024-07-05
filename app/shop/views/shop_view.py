@@ -1,13 +1,14 @@
 # src/app/shop/views/shop_view.py
 
 # Django dan third party modules
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 # Locals
 from app.shop.models.Slider import Slider
 from app.shop.models.Collection import Collection
 from app.shop.models.Product import Product
+from app.shop.models.Page import Page
 
 
 # Create your views here.
@@ -32,3 +33,14 @@ def index(request):
 	}
 
 	return render(request, "shop/index.html", data)
+    
+    
+def display_page(request, slug):
+
+    page = get_object_or_404(Page, slug=slug)
+
+    data = {
+    	"page":page,
+    }
+    
+    return render(request, 'shop/page.html', data)

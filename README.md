@@ -1053,3 +1053,16 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   templates/partials/header.html
 
         :)
+
+
+#### 7. Menampilkan halaman part 1: basics 
+
+        modified:   README.md
+        modified:   app/shop/urls.py
+        modified:   app/shop/views/shop_view.py
+        modified:   templates/partials/header.html
+        new file:   templates/shop/page.html
+
+        Note: Berhasil menampilkan halaman 
+
+        :)
