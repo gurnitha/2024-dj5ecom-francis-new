@@ -65,6 +65,7 @@ def site_settings(request):
     for nav_item in navs:
         nav_collections.append({
             'title': nav_item.title,
+            'description': nav_item.description,
             'button_text': nav_item.button_text,
             'button_link': nav_item.button_link,
             'imageUrl': nav_item.image.url,
