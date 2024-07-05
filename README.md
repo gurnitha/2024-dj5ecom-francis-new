@@ -1203,3 +1203,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   app/shop/context_processors.py
+
+
+#### 9. Menampilkan mega collections banner pada header
+
+        modified:   README.md
+        modified:   templates/partials/header.html
+
+        :)

@@ -141,50 +141,27 @@
                                         {% endfor %}
 
                                     </ul>
+
+                                    <!-- Header banner -->
                                     <div class="d-lg-flex menu_banners row g-3 px-3">
+                                        {% for collection in request.session.nav_collections %}
                                         <div class="col-sm-4">
                                             <div class="header-banner">
                                                 <img
-                                                    alt="menu_banner1"
-                                                    src="/assets/files/megaCollection/11736749706614988691774027121876766721152610541684827357419.png">
+                                                    alt="{{ collection.title }}"
+                                                    src="{{ collection.imageUrl }}">
                                                 <div class="banne_info">
-                                                    <h6 >10% Off</h6>
-                                                    <h4 >New Arrival</h4>
-                                                    <a
-                                                        href="http://localhost:4300/">Shop
-                                                    Now</a>
+                                                    <h6 >{{ collection.description }}</h6>
+                                                    <h4 >{{ collection.title }}</h4>
+                                                    <a href="{{ collection.button_link }}" 
+                                                        target="_blank">{{ collection.button_text }}</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="header-banner">
-                                                <img
-                                                    alt="menu_banner1"
-                                                    src="/assets/files/megaCollection/8932488097310286313588503554459963159142614451684826970123.png">
-                                                <div class="banne_info">
-                                                    <h6 >15% Off</h6>
-                                                    <h4 >Men's Fashion</h4>
-                                                    <a
-                                                        href="http://localhost:4300/">Shop
-                                                    Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="header-banner">
-                                                <img
-                                                    alt="menu_banner1"
-                                                    src="/assets/files/megaCollection/1412527185807988177642011518607795945067036381684827015102.png">
-                                                <div class="banne_info">
-                                                    <h6 >23% Off</h6>
-                                                    <h4 >Kids Fashion</h4>
-                                                    <a
-                                                        href="http://localhost:4300/">Shop
-                                                    Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
+                                    <!-- Header banner ends -->
+                                    
                                 </div>
                             </li>
                             <li class="dropdown dropdown-mega-menu"><a
