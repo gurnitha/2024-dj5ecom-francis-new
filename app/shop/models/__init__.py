@@ -9,3 +9,4 @@ from app.shop.models.Product import Product
 from app.shop.models.Setting import Setting
 from app.shop.models.Social import Social
 from app.shop.models.Page import Page
+from app.shop.models.NavCollection import NavCollection

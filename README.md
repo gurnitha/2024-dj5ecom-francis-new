@@ -1183,3 +1183,17 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         new file:   app/shop/migrations/0010_navcollection.py
+
+
+#### 7. Mendaftarkan dan mendefinisikan model NavColletion pada shop/admin.py 
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        modified:   app/shop/models/NavCollection.py
+        modified:   app/shop/models/__init__.py (lupa mendaftarkan model NavCollection di sini)        new file:   media/new_collections/2024/07/05/coll_1.png
+        new file:   media/new_collections/2024/07/05/coll_1_SaSAKTO.png
+        new file:   media/new_collections/2024/07/05/coll_1_Y30elgj.png
+        new file:   media/new_collections/2024/07/05/coll_2.png
+        new file:   media/new_collections/2024/07/05/coll_3.png
+        new file:   media/new_collections/2024/07/05/coll_4.png
+        modified:   app/shop/admin.py

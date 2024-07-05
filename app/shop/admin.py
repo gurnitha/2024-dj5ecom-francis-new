@@ -7,7 +7,10 @@ from django.db import models
 from ckeditor.widgets import CKEditorWidget
 
 # Locals
-from app.shop.models import Slider, Collection, Category, Image, Product, Setting, Social, Page
+from app.shop.models import (
+    Slider, Collection, Category, 
+    Image, Product, Setting, 
+    Social, Page, NavCollection)
 
 
 # Register your models here.
@@ -19,6 +22,16 @@ class SliderAdmin(admin.ModelAdmin):
     def display_image(self, obj):
         return format_html(f'<img src="{ obj.image.url }" width="150" />')
 
+    display_image.short_description = 'image'
+
+  
+class NavCollectionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'display_image')
+    list_display_links = ('title',)
+    
+    def display_image(self, obj):
+        return format_html(f'<img src="{ obj.image.url }" width="150" />')
+    
     display_image.short_description = 'image'
 
   
@@ -98,3 +111,4 @@ admin.site.register(Product, ProductAdmin)
 admin.site.register(Setting, SettingAdmin)
 admin.site.register(Social, SocialAdmin)
 admin.site.register(Page, PageAdmin)
+admin.site.register(NavCollection, NavCollectionAdmin)
