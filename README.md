@@ -1222,3 +1222,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
 ## 13. PENGELOLAAN PRODUK
 
+
+#### 1. Format harga dengan filter khusus
+
+        modified:   README.md
+        new file:   app/shop/templatetags/price_filter.py
+        modified:   templates/partials/product.html
