@@ -1349,3 +1349,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/shop/shop_list.html
+
+
+#### 8. Paginasi part 5: Memindahkan paginasi ke dalam folder partials
+
+        new file:   templates/partials/pagination.html
+        modified:   templates/shop/shop_list.html
