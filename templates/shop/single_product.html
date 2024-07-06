@@ -28,15 +28,20 @@
 
                                 	{% for image in product.images.all %}
                                 	<!-- Galeri image kecil -->
-                                    <div class="item slick-slide slick-current slick-active" data-slick-index="0"
-                                        aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide20"
-                                        style="width: 129px;">
-                                        <a href="#" class="product_gallery_item active"
-	                                        data-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
-	                                        data-zoom-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
+                                    <div 
+                                    	class="item slick-slide 
+                                    	{% if forloop.first %} slick-current slick-active {% endif %}" 
+                                    	data-slick-index="{{ forloop.index }}"
+                                        aria-hidden="false" tabindex="-1" role="option" 
+                                        aria-describedby="slick-slide{{ forloop.index }}"
+                                        style="width: 50px;">
+                                        <a 
+                                        	href="#" 
+                                        	class="product_gallery_item {% if forloop.first %} active {% endif %}"
+	                                        data-image="{{ image.image.url }}"
+	                                        data-zoom-image="{{ image.image.url }}"
 	                                        tabindex="0">
-	                                        <img alt="product_small_img1"
-	                                        	src="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp">
+	                                        <img alt="product_small_img1"src="{{ image.image.url }}">
                                     	</a>
                                     </div>
                                     <!-- Galeri image kecil -->
