@@ -33,30 +33,36 @@ def index(request):
 	}
 
 	return render(request, "shop/index.html", data)
-    
-    
+	
+	
 def display_page(request, slug):
 
-    page = get_object_or_404(Page, slug=slug)
+	page = get_object_or_404(Page, slug=slug)
 
-    data = {
-    	"page":page,
-    }
-    
-    return render(request, 'shop/page.html', data)
-    
-    
+	data = {
+		"page":page,
+	}
+	
+	return render(request, 'shop/page.html', data)
+	
+	
 def display_product(request, slug):
 
-    product = get_object_or_404(Product, slug=slug)
+	product = get_object_or_404(Product, slug=slug)
 
-    data = {
-    	"product":product,
-    }
-    
-    return render(request, 'shop/single_product.html', data)
-    
-    
+	data = {
+		"product":product,
+	}
+	
+	return render(request, 'shop/single_product.html', data)
+	
+	
 def shop(request):
 
-    return render(request, 'shop/shop_list.html')
+	products = Product.objects.all()
+
+	data = {
+		"products":products
+	}
+	
+	return render(request, 'shop/shop_list.html', data)
