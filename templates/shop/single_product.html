@@ -25,38 +25,23 @@
                             class="product_gallery_item slick_slider slick-initialized slick-slider">
                             <div aria-live="polite" class="slick-list draggable">
                                 <div class="slick-track" role="listbox" style="opacity: 1; width: 556px; left: 0px;">
+
+                                	{% for image in product.images.all %}
+                                	<!-- Galeri image kecil -->
                                     <div class="item slick-slide slick-current slick-active" data-slick-index="0"
                                         aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide20"
-                                        style="width: 129px;"><a href="#" class="product_gallery_item active"
-                                        data-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
-                                        data-zoom-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
-                                        tabindex="0"><img alt="product_small_img1"
-                                        src="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"></a>
+                                        style="width: 129px;">
+                                        <a href="#" class="product_gallery_item active"
+	                                        data-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
+	                                        data-zoom-image="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp"
+	                                        tabindex="0">
+	                                        <img alt="product_small_img1"
+	                                        	src="/assets/files/culottes/culotte_8/10518988473111520886581236853833613928085898971684087225041.webp">
+                                    	</a>
                                     </div>
-                                    <div class="item slick-slide slick-active" data-slick-index="1" aria-hidden="false"
-                                        tabindex="-1" role="option" aria-describedby="slick-slide21"
-                                        style="width: 129px;"><a href="#" class="product_gallery_item active"
-                                        data-image="/assets/files/culottes/culotte_8/8858030309010591138243975967438607632572228411684087225104.webp"
-                                        data-zoom-image="/assets/files/culottes/culotte_8/8858030309010591138243975967438607632572228411684087225104.webp"
-                                        tabindex="0"><img alt="product_small_img1"
-                                        src="/assets/files/culottes/culotte_8/8858030309010591138243975967438607632572228411684087225104.webp"></a>
-                                    </div>
-                                    <div class="item slick-slide slick-active" data-slick-index="2" aria-hidden="false"
-                                        tabindex="-1" role="option" aria-describedby="slick-slide22"
-                                        style="width: 129px;"><a href="#" class="product_gallery_item active"
-                                        data-image="/assets/files/culottes/culotte_8/261752098622508939994245011589886325606197071684087225130.webp"
-                                        data-zoom-image="/assets/files/culottes/culotte_8/261752098622508939994245011589886325606197071684087225130.webp"
-                                        tabindex="0"><img alt="product_small_img1"
-                                        src="/assets/files/culottes/culotte_8/261752098622508939994245011589886325606197071684087225130.webp"></a>
-                                    </div>
-                                    <div class="item slick-slide slick-active" data-slick-index="3" aria-hidden="false"
-                                        tabindex="-1" role="option" aria-describedby="slick-slide23"
-                                        style="width: 129px;"><a href="#" class="product_gallery_item active"
-                                        data-image="/assets/files/culottes/culotte_8/15182117027213351040102609654396778225189902031684087225156.webp"
-                                        data-zoom-image="/assets/files/culottes/culotte_8/15182117027213351040102609654396778225189902031684087225156.webp"
-                                        tabindex="0"><img alt="product_small_img1"
-                                        src="/assets/files/culottes/culotte_8/15182117027213351040102609654396778225189902031684087225156.webp"></a>
-                                    </div>
+                                    <!-- Galeri image kecil -->
+                                	{% endfor %}
+
                                 </div>
                             </div>
                         </div>

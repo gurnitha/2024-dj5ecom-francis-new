@@ -1271,3 +1271,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         Next: 
 
         Menampilkan galeri gambar kecil
+
+
+#### 6. Menampilkan galeri gambar kecil part 1: persiapan
+
+        modified:   README.md
+        modified:   templates/shop/single_product.html
