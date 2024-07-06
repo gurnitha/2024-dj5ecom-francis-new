@@ -1250,3 +1250,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   templates/partials/product.html
         # template
         new file:   templates/shop/single_product.html
+
+
+#### 4. Mengisi HTML tempate pada laman single_product
+
+        modified:   README.md
+        modified:   templates/shop/single_product.html
