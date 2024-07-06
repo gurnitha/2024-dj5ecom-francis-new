@@ -1309,3 +1309,10 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   app/shop/urls.py
         modified:   app/shop/views/shop_view.py
         new file:   templates/shop/shop_list.html
+
+
+#### 2. Membuat halaman shop part 2: Mengisi HTML template dan tautan
+
+        modified:   README.md
+        modified:   templates/partials/header.html
+        modified:   templates/shop/shop_list.html
