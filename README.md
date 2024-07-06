@@ -1228,3 +1228,10 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   README.md
         new file:   app/shop/templatetags/price_filter.py
         modified:   templates/partials/product.html
+
+
+#### 2. Format harga prosentase pengurangan
+
+        modified:   README.md
+        modified:   app/shop/templatetags/price_filter.py
+        modified:   templates/partials/product.html
