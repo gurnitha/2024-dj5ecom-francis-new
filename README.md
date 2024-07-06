@@ -1355,3 +1355,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         new file:   templates/partials/pagination.html
         modified:   templates/shop/shop_list.html
+
+
+#### 9. Paginasi part 5: Include file pagination pada shop_list
+
+        modified:   README.md
+        modified:   templates/shop/shop_list.html
