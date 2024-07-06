@@ -1301,3 +1301,11 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
 
 ## 14. PENGELOLAAN SHOP
+
+
+#### 1. Membuat halaman shop part 1: uls, views, templates
+
+        modified:   README.md
+        modified:   app/shop/urls.py
+        modified:   app/shop/views/shop_view.py
+        new file:   templates/shop/shop_list.html

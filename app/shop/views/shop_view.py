@@ -55,3 +55,8 @@ def display_product(request, slug):
     }
     
     return render(request, 'shop/single_product.html', data)
+    
+    
+def shop(request):
+
+    return render(request, 'shop/shop_list.html')
