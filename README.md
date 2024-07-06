@@ -1256,3 +1256,18 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/shop/single_product.html
+
+
+#### 5. Menampilkan halaman single product
+
+        modified:   README.md
+        modified:   templates/shop/single_product.html
+
+        Note:
+
+        1. Tampilan belum sempurna.
+        2. Galeri gambar kecil belum dinamis.
+
+        Next: 
+
+        Menampilkan galeri gambar kecil
