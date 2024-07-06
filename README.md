@@ -1283,3 +1283,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/shop/single_product.html
+
+
+#### 8. Menampilkan galeri gambar kecil part 3: menampilkan deskripsi product
+
+        modified:   README.md
+        modified:   templates/shop/single_product.html

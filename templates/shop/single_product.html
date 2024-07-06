@@ -153,6 +153,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="tab-style3">
+
+                    	<!-- Tabs -->
                         <ul role="tablist" class="nav nav-tabs">
                             <li class="nav-item"><a id="Description-tab" data-bs-toggle="tab" href="#Description"
                                 role="tab" aria-controls="Description" aria-selected="true"
@@ -164,14 +166,15 @@
                                 aria-controls="Reviews" aria-selected="false" class="nav-link">Reviews (2)</a>
                             </li>
                         </ul>
+                        <!-- Tabs ends -->
+
+                        <!-- Contents -->
                         <div class="tab-content shop_info_tab">
                             <div id="Description" role="tabpanel" aria-labelledby="Description-tab"
-                                class="tab-pane fade show active"> Description du
-                                produit : Culotte en dentelle 
+                                class="tab-pane fade show active">{{ product.description | safe }}
                             </div>
                             <div id="Additional-info" role="tabpanel" aria-labelledby="Additional-info-tab"
-                                class="tab-pane fade"> Description du produit
-                                : Culotte en dentelle 
+                                class="tab-pane fade">{{ product.additional_infos | safe }}
                             </div>
                             <div id="Reviews" role="tabpanel" aria-labelledby="Reviews-tab" class="tab-pane fade">
                                 <div class="comments">
@@ -249,6 +252,8 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Contents ends -->
+
                     </div>
                 </div>
             </div>
