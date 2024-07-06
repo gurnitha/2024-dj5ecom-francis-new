@@ -1337,3 +1337,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   templates/shop/shop_list.html
 
         :)
+
+
+#### 6. Paginasi part 3: Menampilkan paginasi (jumlah product sangat banyak [First | Last])
+
+        modified:   README.md
+        modified:   templates/shop/shop_list.html
