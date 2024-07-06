@@ -1233,5 +1233,20 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 #### 2. Format harga prosentase pengurangan
 
         modified:   README.md
+        # Mendefinisikan simbul harga dan prosentase diskon
         modified:   app/shop/templatetags/price_filter.py
+        # Mengaplikasikan hal di atas
         modified:   templates/partials/product.html
+
+
+#### 3. Menampilkan halaman single product
+
+        modified:   README.md
+        # modifikasi dan buat path baru
+        modified:   app/shop/urls.py
+        # membuat fungsing single_product
+        modified:   app/shop/views/shop_view.py
+        # menambahkan link
+        modified:   templates/partials/product.html
+        # template
+        new file:   templates/shop/single_product.html

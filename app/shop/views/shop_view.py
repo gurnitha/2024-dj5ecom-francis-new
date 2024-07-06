@@ -44,3 +44,14 @@ def display_page(request, slug):
     }
     
     return render(request, 'shop/page.html', data)
+    
+    
+def display_product(request, slug):
+
+    product = get_object_or_404(Product, slug=slug)
+
+    data = {
+    	"product":product,
+    }
+    
+    return render(request, 'shop/single_product.html', data)

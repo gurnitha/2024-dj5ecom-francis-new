@@ -4,12 +4,13 @@
 from django.urls import path
 
 # Locals
-from app.shop.views.shop_view import index, display_page
+from app.shop.views import shop_view
 
 # app name
 app_name = "shop"
 
 urlpatterns = [
-    path('', index, name='home'),
-    path('page/<str:slug>', display_page, name='page'),
+    path('', shop_view.index, name='home'),
+    path('page/<str:slug>', shop_view.display_page, name='page'),
+    path('prouct/<str:slug>', shop_view.display_product, name='single_product'),
 ]
