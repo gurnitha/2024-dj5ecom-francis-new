@@ -2,7 +2,7 @@
 
 # Django dan third party modules
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Locals
 from app.shop.models.Slider import Slider
@@ -61,8 +61,20 @@ def shop(request):
 
 	products = Product.objects.all()
 
+	paginator = Paginator(products, 3)
+	page = request.GET.get('page', 1)
+
+	try:
+		products_page = paginator.page(page)
+	except PageNotAnInteger:
+		products_page = paginator.page(1)
+	except EmptyPage:
+		products_page = paginator.page(paginator.num_pages)
+	except:
+		products_page = paginator.page(1)
+
 	data = {
-		"products":products
+		"products":products_page
 	}
 	
 	return render(request, 'shop/shop_list.html', data)

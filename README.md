@@ -1323,3 +1323,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   README.md
         modified:   app/shop/views/shop_view.py
         modified:   templates/shop/shop_list.html
+
+
+#### 4. Paginasi part 1: Membuat paginasi
+
+        modified:   README.md
+        modified:   app/shop/views/shop_view.py
