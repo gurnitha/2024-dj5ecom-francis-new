@@ -75,6 +75,10 @@ class ProductAdmin(admin.ModelAdmin):
     
     exclude = ('slug',)
     display_image.short_description = 'image'
+    
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget}
+    }
 
 
 class SettingAdmin(admin.ModelAdmin):

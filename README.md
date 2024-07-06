@@ -1285,7 +1285,15 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   templates/shop/single_product.html
 
 
-#### 8. Menampilkan galeri gambar kecil part 3: menampilkan deskripsi product
+#### 8. Menampilkan deskripsi product part 1: menampilkan deskripsi product
 
         modified:   README.md
+        modified:   templates/shop/single_product.html
+
+
+#### 9. Menampilkan deskripsi product part 2: membuat tautan dan menampilkan CKeditor pada field description
+
+        modified:   README.md
+        modified:   app/shop/admin.py
+        modified:   templates/partials/header.html
         modified:   templates/shop/single_product.html

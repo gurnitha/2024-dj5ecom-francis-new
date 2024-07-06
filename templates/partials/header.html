@@ -131,7 +131,7 @@
                                                 {% for product in category.products %}
                                                 <li class="d-flex align-items-center p-1">
                                                     <img src="{{ product.image }}" height="25" width="25" alt="{{ product.name }}">
-                                                    <a href="" class="dropdown-item nav-link nav_item p-2">
+                                                    <a href="{% url 'shop:single_product' product.slug %}" class="dropdown-item nav-link nav_item p-2">
                                                         {{ product.name }}
                                                     </a>
                                                 </li>
