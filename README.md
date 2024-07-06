@@ -1343,3 +1343,9 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
 
         modified:   README.md
         modified:   templates/shop/shop_list.html
+
+
+#### 7. Paginasi part 4: Menampilkan paginasi (jumlah product sangat banyak [... | ...])
+
+        modified:   README.md
+        modified:   templates/shop/shop_list.html
