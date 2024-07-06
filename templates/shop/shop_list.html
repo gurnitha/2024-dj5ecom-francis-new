@@ -58,16 +58,43 @@
                 <!-- shop_container ends -->
 
                 <!-- Paginasi -->
+                {% if products.has_other_pages %}
                 <div class="row">
                     <div class="col-12">
                         <ul class="pagination mt-3 justify-content-center pagination_style1">
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="linearicons-arrow-right"></i></a></li>
+
+                            {% if products.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ products.previous_page_number }}">
+                                        <i class="linearicons-arrow-left"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% for page in products.paginator.page_range %}
+                                {% if products.number == page %}
+                                    <li class="page-item active">
+                                        <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+                                    </li>
+                                {% else %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if products.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ products.next_page_number }}">
+                                        <i class="linearicons-arrow-right"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            
                         </ul>
                     </div>
                 </div>
+                {% endif %}
                 <!-- Paginasi ends -->
 
             </div>
