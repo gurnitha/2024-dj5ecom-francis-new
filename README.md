@@ -1297,3 +1297,7 @@ Udemy:https://www.udemy.com/course/apprendre-django-a-par-la-creation-dun-site-e
         modified:   app/shop/admin.py
         modified:   templates/partials/header.html
         modified:   templates/shop/single_product.html
+
+
+
+## 14. PENGELOLAAN SHOP
